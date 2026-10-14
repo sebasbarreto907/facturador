@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini facturador</title>
+  <link rel="stylesheet" href="diseño.css">
+  <!-- defer: el script se ejecuta cuando el HTML ya está cargado -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Mini facturador</h1>
+    <p class="sub">Calcula subtotal, IVA (15 %) y total de una compra</p>
+
+    <label for="producto">Producto</label>
+    <input type="text" id="producto" placeholder="Ej.: Mouse inalámbrico">
+
+    <label for="precio">Precio unitario (USD)</label>
+    <input type="number" id="precio" min="0" step="0.01" placeholder="Ej.: 12.50">
+
+    <label for="cantidad">Cantidad</label>
+    <input type="number" id="cantidad" min="1" step="1" value="1">
+
+    <label for="descuento">Descuento %</label>
+    <input type="number" id="descuento" min="0" max="100" step="0.01" value="0">
+
+    <button id="btnCalcular">Calcular</button>
+    <button id="btnLimpiar" type="button">Limpiar</button>
+
+    <section id="resultado" class="resultado">
+      <p>Ingresa los datos y presiona <strong>Calcular</strong>.</p>
+    </section>
+  </main>
+</body>
+</html>
